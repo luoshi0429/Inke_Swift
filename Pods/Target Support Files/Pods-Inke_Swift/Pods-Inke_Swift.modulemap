@@ -1,0 +1,6 @@
+framework module Pods_Inke_Swift {
+  umbrella header "Pods-Inke_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
