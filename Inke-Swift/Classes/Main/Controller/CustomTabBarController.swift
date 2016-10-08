@@ -38,21 +38,28 @@ extension CustomTabBarController {
     }
     
     private func addOneChildVc(childVcStr: String, imageName:String) {
-                
-        // 命名空间
-        let namespace = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"]  as! String
-        //
-        let clsName =  namespace + "." + childVcStr
-        guard let cls = NSClassFromString(clsName) else {
-            return
+        
+        var vc: UIViewController
+        if childVcStr == "ProfileTableViewController" {
+            let sb = UIStoryboard(name: "ProfileTableViewController", bundle: nil)
+            let profileVc = sb.instantiateViewControllerWithIdentifier("profileVc") as! ProfileTableViewController
+            vc = profileVc
+        } else {
+            // 命名空间
+            let namespace = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"]  as! String
+            //
+            let clsName =  namespace + "." + childVcStr
+            guard let cls = NSClassFromString(clsName) else {
+                return
+            }
+            
+            guard let vcClass = cls as? UIViewController.Type else {
+                return
+            }
+            
+            vc = vcClass.init()
         }
         
-        guard let vcClass = cls as? UIViewController.Type else {
-            return
-        }
-        
-        let vc = vcClass.init()
-    
         let selectedImageName = imageName + "_p" ;
         vc.tabBarItem.image = UIImage(named:imageName)
         vc.tabBarItem.selectedImage = UIImage(named: selectedImageName)
@@ -60,7 +67,6 @@ extension CustomTabBarController {
         items.append(vc.tabBarItem)
         
         let nav = CustomNavigationController(rootViewController: vc)
-        
         addChildViewController(nav)
     }
     
@@ -95,7 +101,6 @@ extension CustomTabBarController: PopChooseViewDelegate {
         let myLiveVc = MyLiveViewController()
         presentViewController(myLiveVc, animated: true, completion: nil)
     }
-    
     
     func popChooseViewDidChooseVideo() {
         LMLog("短视频...")

@@ -71,7 +71,7 @@ class HotTableViewController: UITableViewController {
                 return
             }
             
-            LMLog(successInfo)
+//            LMLog(successInfo)
             guard let giftArr = successInfo!["gifts"] as? [[String : AnyObject]] else {
                 return
             }

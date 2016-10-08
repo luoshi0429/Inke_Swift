@@ -7,79 +7,79 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileTableViewController: UITableViewController {
-
+    
+    private lazy var headerImageView = UIImageView()
+    private lazy var profileImageView = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.hidden = true
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.hidden = false 
     }
+}
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+// MARK: - UI
+extension ProfileTableViewController {
+    private func setupUI() {
+        
+        view.frame = ScreenFrame
+        tableView.backgroundColor = UIColor(red: 244 / 255.0, green: 249 / 255.0 , blue: 250 / 255.0, alpha: 1.0)
+        tableView.separatorStyle = .None
+        tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0)
+        
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clearColor()
+        headerView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: headerHeight)
+        tableView.tableHeaderView = headerView
+        
+        headerImageView.contentMode = .ScaleAspectFill
+        headerImageView.clipsToBounds = true
+        headerImageView.sd_setImageWithURL(NSURL(string: "http://wx.qlogo.cn/mmopen/C9QznKczMm3UpNPVFRfFlGFpQnkg3qcfsWEmQlBa9Ua0GecGptYdmnC7qgnzY5wn4A9JvH6T9eNKicicqMJjuaRTdAE1t0fJ7ia/0"))
+        headerImageView.frame = headerView.bounds
+        headerView.addSubview(headerImageView)
+        
+        SDWebImageManager.sharedManager().downloadImageWithURL(NSURL(string: "http://wx.qlogo.cn/mmopen/C9QznKczMm3UpNPVFRfFlGFpQnkg3qcfsWEmQlBa9Ua0GecGptYdmnC7qgnzY5wn4A9JvH6T9eNKicicqMJjuaRTdAE1t0fJ7ia/0"), options: .RetryFailed, progress: nil, completed: { (image, error, _, _, _) in
+            if error != nil || image == nil {
+                return
+            }
+            self.profileImageView.image = image.circleImage()
+        })
+        profileImageView.frame.size = CGSize(width: 60, height: 60)
+        profileImageView.center = headerView.center
+        headerView.addSubview(profileImageView)
     }
+}
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+// MARK: - UITableViewDelegate
+extension ProfileTableViewController {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.section == 2 {
+            navigationController?.pushViewController(SettingViewController(), animated: true)
+        } 
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        
+        if offsetY >= 20 {
+            headerImageView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: headerHeight)
+            return
+        }
+        
+        headerImageView.frame = CGRect(x:offsetY , y: offsetY, width: ScreenWidth - 2 * offsetY , height: headerHeight - offsetY )
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

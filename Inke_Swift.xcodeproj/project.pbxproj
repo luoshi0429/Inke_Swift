@@ -13,6 +13,8 @@
 		C6075D3D1DA37EE400D88C93 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6075D3C1DA37EE400D88C93 /* UIImage+Extension.swift */; };
 		C6075D3F1DA3992700D88C93 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6075D3E1DA3992700D88C93 /* MessageViewController.swift */; };
 		C6075D411DA3C09400D88C93 /* LoveEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6075D401DA3C09400D88C93 /* LoveEmitter.swift */; };
+		C6191AD91DA8B16C0066E57C /* ProfileTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6191AD81DA8B16C0066E57C /* ProfileTableViewController.storyboard */; };
+		C6191ADB1DA8BFD90066E57C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6191ADA1DA8BFD90066E57C /* SettingViewController.swift */; };
 		C622F4EA1DA08DF700DAAF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C622F4E91DA08DF700DAAF3C /* AppDelegate.swift */; };
 		C622F4F11DA08DF700DAAF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C622F4F01DA08DF700DAAF3C /* Assets.xcassets */; };
 		C622F4F41DA08DF700DAAF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C622F4F21DA08DF700DAAF3C /* LaunchScreen.storyboard */; };
@@ -60,8 +62,6 @@
 		C6EEF3DD1DA758C00012F730 /* PopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3DC1DA758C00012F730 /* PopButton.swift */; };
 		C6EEF3E21DA78C4E0012F730 /* MyLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3E01DA78C4E0012F730 /* MyLiveViewController.swift */; };
 		C6EEF3E31DA78C4E0012F730 /* MyLiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EEF3E11DA78C4E0012F730 /* MyLiveViewController.xib */; };
-		C6EEF3E51DA78DD10012F730 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3E41DA78DD10012F730 /* User.swift */; };
-		C6EEF3E71DA78DDE0012F730 /* UserTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3E61DA78DDE0012F730 /* UserTool.swift */; };
 		C6EEF42A1DA7A0C10012F730 /* LFAudioCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3F51DA7A0C10012F730 /* LFAudioCapture.m */; };
 		C6EEF42B1DA7A0C10012F730 /* LFVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3F71DA7A0C10012F730 /* LFVideoCapture.m */; };
 		C6EEF42C1DA7A0C10012F730 /* LFAVEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6EEF3FB1DA7A0C10012F730 /* LFAVEncoder.mm */; };
@@ -130,6 +130,8 @@
 		C6075D3C1DA37EE400D88C93 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		C6075D3E1DA3992700D88C93 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		C6075D401DA3C09400D88C93 /* LoveEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoveEmitter.swift; sourceTree = "<group>"; };
+		C6191AD81DA8B16C0066E57C /* ProfileTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileTableViewController.storyboard; sourceTree = "<group>"; };
+		C6191ADA1DA8BFD90066E57C /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C622F4E61DA08DF700DAAF3C /* Inke_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inke_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C622F4E91DA08DF700DAAF3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C622F4F01DA08DF700DAAF3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,8 +181,6 @@
 		C6EEF3DC1DA758C00012F730 /* PopButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopButton.swift; sourceTree = "<group>"; };
 		C6EEF3E01DA78C4E0012F730 /* MyLiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLiveViewController.swift; sourceTree = "<group>"; };
 		C6EEF3E11DA78C4E0012F730 /* MyLiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLiveViewController.xib; sourceTree = "<group>"; };
-		C6EEF3E41DA78DD10012F730 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C6EEF3E61DA78DDE0012F730 /* UserTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTool.swift; sourceTree = "<group>"; };
 		C6EEF3F41DA7A0C10012F730 /* LFAudioCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFAudioCapture.h; sourceTree = "<group>"; };
 		C6EEF3F51DA7A0C10012F730 /* LFAudioCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFAudioCapture.m; sourceTree = "<group>"; };
 		C6EEF3F61DA7A0C10012F730 /* LFVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFVideoCapture.h; sourceTree = "<group>"; };
@@ -362,7 +362,6 @@
 		C622F4FD1DA093D000DAAF3C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C6EEF3F21DA7A0C10012F730 /* LFLiveKit */,
 				C6075D3A1DA37EAF00D88C93 /* Other */,
 				C622F51C1DA0D65300DAAF3C /* Tool */,
 				C622F4FE1DA093D000DAAF3C /* MyLive */,
@@ -488,8 +487,6 @@
 		C622F5081DA093D000DAAF3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C6EEF3E41DA78DD10012F730 /* User.swift */,
-				C6EEF3E61DA78DDE0012F730 /* UserTool.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -549,6 +546,8 @@
 			isa = PBXGroup;
 			children = (
 				C622F5291DA1028300DAAF3C /* ProfileTableViewController.swift */,
+				C6191AD81DA8B16C0066E57C /* ProfileTableViewController.storyboard */,
+				C6191ADA1DA8BFD90066E57C /* SettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -590,7 +589,8 @@
 				C6EEF4171DA7A0C10012F730 /* objects */,
 				C6EEF4221DA7A0C10012F730 /* publish */,
 			);
-			path = LFLiveKit;
+			name = LFLiveKit;
+			path = ../../LFLiveKit;
 			sourceTree = "<group>";
 		};
 		C6EEF3F31DA7A0C10012F730 /* capture */ = {
@@ -700,6 +700,7 @@
 		C6EEF4521DA886430012F730 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C6EEF3F21DA7A0C10012F730 /* LFLiveKit */,
 				C6EEF4531DA886580012F730 /* IJKMediaFramework.framework */,
 			);
 			path = Lib;
@@ -870,6 +871,7 @@
 				C6EEF4761DA88AB70012F730 /* refresh_fly_0002.png in Resources */,
 				C6EEF47E1DA88AB70012F730 /* refresh_fly_0010.png in Resources */,
 				C6EEF4831DA88AB70012F730 /* refresh_fly_0015.png in Resources */,
+				C6191AD91DA8B16C0066E57C /* ProfileTableViewController.storyboard in Resources */,
 				C6EEF4781DA88AB70012F730 /* refresh_fly_0004.png in Resources */,
 				C6EEF4871DA88AB70012F730 /* refresh_fly_0019.png in Resources */,
 				C6EEF47D1DA88AB70012F730 /* refresh_fly_0009.png in Resources */,
@@ -952,12 +954,10 @@
 				C6EEF4301DA7A0C10012F730 /* LFH264VideoEncoder.mm in Sources */,
 				C6EEF4351DA7A0C10012F730 /* LFGPUImageBeautyFilter.m in Sources */,
 				C6EEF43B1DA7A0C10012F730 /* LFLiveStreamInfo.m in Sources */,
-				C6EEF3E51DA78DD10012F730 /* User.swift in Sources */,
 				C6EEF4321DA7A0C10012F730 /* LFHardwareVideoEncoder.m in Sources */,
 				C6EEF4341DA7A0C10012F730 /* LFLiveVideoConfiguration.m in Sources */,
 				C622F51A1DA0996800DAAF3C /* LoginViewController.swift in Sources */,
 				C6075D3F1DA3992700D88C93 /* MessageViewController.swift in Sources */,
-				C6EEF3E71DA78DDE0012F730 /* UserTool.swift in Sources */,
 				C6EEF4381DA7A0C10012F730 /* LFAudioFrame.m in Sources */,
 				C6EEF42B1DA7A0C10012F730 /* LFVideoCapture.m in Sources */,
 				C6EEF3DB1DA74EA40012F730 /* PopChooseView.swift in Sources */,
@@ -969,6 +969,7 @@
 				C6EEF42D1DA7A0C10012F730 /* LFMP4Atom.m in Sources */,
 				C6EEF42C1DA7A0C10012F730 /* LFAVEncoder.mm in Sources */,
 				C6EEF4311DA7A0C10012F730 /* LFHardwareAudioEncoder.m in Sources */,
+				C6191ADB1DA8BFD90066E57C /* SettingViewController.swift in Sources */,
 				C6815A8A1DA2B238007C42C0 /* LiveViewController.swift in Sources */,
 				C6EEF3DD1DA758C00012F730 /* PopButton.swift in Sources */,
 				C6EEF3D91DA733D60012F730 /* GiftTypeTwoView.swift in Sources */,

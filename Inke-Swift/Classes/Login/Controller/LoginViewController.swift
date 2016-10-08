@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(2 * NSEC_PER_SEC)), dispatch_get_main_queue()) {
             self.hudView.removeFromSuperview()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: LoginOrNotKey)
-            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: LoginNotification, object: nil))
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: LoginNotification, object: true))
         }
     }
 }

@@ -33,9 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    @objc private func logined() {
-        let tabBarController = CustomTabBarController()
-        window?.rootViewController = tabBarController
+    @objc private func logined(note: NSNotification) {
+        if note.object as! Bool == true {
+            let tabBarController = CustomTabBarController()
+            window?.rootViewController = tabBarController
+        } else {
+            let loginVc = LoginViewController()
+            window?.rootViewController = loginVc
+        }
     }
     
     func applicationWillResignActive(application: UIApplication) {

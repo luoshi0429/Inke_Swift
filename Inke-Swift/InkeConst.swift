@@ -23,6 +23,8 @@ let giftViewHeight: CGFloat = 250
 let giftCellHeight: CGFloat = 100
 let bottomViewHeight: CGFloat = 50
 
+let headerHeight: CGFloat = 220
+
 
 let LoginOrNotKey = "LoginOrNotKey"
 
